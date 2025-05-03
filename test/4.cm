@@ -1,0 +1,11 @@
+/* This should throw a syntactic table 
+
+void main(void) {
+  int x = 10;  /* ERROR: Invalid variable declaration */
+  int y;
+
+  y = input();
+  x = y + 5;
+  
+  output(x);
+} 

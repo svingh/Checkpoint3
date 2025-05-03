@@ -1,0 +1,7 @@
+Entering the global scope:
+    input: (void) -> int
+    output: (int) -> void
+    y: int
+    gcd: (int, int) -> int
+    main: (void) -> void
+Leaving the global scope

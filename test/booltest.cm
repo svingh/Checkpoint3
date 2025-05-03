@@ -1,0 +1,12 @@
+void main(void) {
+   bool a;
+   bool b;
+   a = true;
+   b = false;
+
+   if (a && b) {
+      output(1);
+   } else {
+      output(0);
+   }
+}

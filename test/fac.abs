@@ -1,0 +1,44 @@
+The abstract syntax tree is:
+FunctionDec:
+    NameTy: void
+    CompoundExp: 
+        SimpleDec:
+            NameTy: int
+            String: x
+        SimpleDec:
+            NameTy: int
+            String: fac
+        AssignExp:
+            VarExp:
+                SimpleVar: x
+            CallExp: 
+                Func: input
+        AssignExp:
+            VarExp:
+                SimpleVar: fac
+            IntExp: 1
+        WhileExp:
+            OpExp: > 
+                VarExp:
+                    SimpleVar: x
+                IntExp: 1
+            CompoundExp: 
+                AssignExp:
+                    VarExp:
+                        SimpleVar: fac
+                    OpExp: * 
+                        VarExp:
+                            SimpleVar: fac
+                        VarExp:
+                            SimpleVar: x
+                AssignExp:
+                    VarExp:
+                        SimpleVar: x
+                    OpExp: - 
+                        VarExp:
+                            SimpleVar: x
+                        IntExp: 1
+        CallExp: 
+            Func: output
+            VarExp:
+                SimpleVar: fac

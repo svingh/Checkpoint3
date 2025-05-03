@@ -1,0 +1,17 @@
+/* Invalid program due to type mismatch */
+/* type mismatch assigning int to bool */ 
+
+
+void main(void) {
+  int x;
+  bool test;
+  
+  x = input();
+  test = x;  /* ERROR: Type mismatch, assigning int to bool */
+  
+  while (test) {  
+    x = x - 1;
+  }
+  
+  output(x);
+}

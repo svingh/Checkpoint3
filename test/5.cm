@@ -1,0 +1,74 @@
+/*
+Test conditions for if- and while- stmts must be int
+Complex return statement checking
+Variable redeclaration fixed
+Undefined reference fixed
+*/
+
+void foo (void) {
+    int x;
+    x = 3;
+    output(x);
+}
+
+void main(void) {
+    int x;
+    int y;  // Undefined reference fixed
+
+    x = 3;
+
+    // If conditions must be int, so using 'x != 0'
+    if (x != 0) {
+        foo();  // Corrected: foo() is void, so it cannot be passed into output()
+    }
+
+    y = 10;  // Undefined reference fixed
+}
+
+int returnsProperly (void) {
+    int x;
+    int y;
+    x = 2;
+    y = 15;
+
+    if (x == 3) {
+        return 17 + 2;
+    }
+    else {
+        if (x > 4) {
+            if (y == 5) {
+                return 15;
+            }
+            else {
+                return 12;
+            }
+        }
+        else {
+            return 5;
+        }
+    }
+}
+
+int missingReturn (void) {
+    int x;
+    int y;
+    x = 2;
+    y = 15;
+
+    if (x == 3) {
+        return 17 + 2;
+    }
+    else {
+        if (x > 4) {
+            if (y == 5) {
+                return 15;
+            }
+            else {
+                return 12;
+            }
+        }
+        else {
+            return 5;  // Added missing return statement to ensure all paths return an int
+        }
+    }
+}

@@ -1,0 +1,7 @@
+/* 1.cm - A simple test program for code generation */
+int x;
+
+void main(void) {
+  x = 5;
+  output(x);
+}
